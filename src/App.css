@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgba(30, 7, 161, 0.883);
+}
+.info{
+  display: flex;
+  align-items: center;
+}
+.info img{
+  height: 50px;
+  border-radius: 50%;
+  width: 40%;
+}
+.info h1{
+  margin-top: 20px;
+  font-size: 18px;
   color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+.items{
+  display: flex;
+} 
+.items li{
+  color: white;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  margin-left: 30px;
+  list-style: none;
+}
+.hamburger{
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  justify-content: space-around;
+  z-index: 10;
+  flex-flow: column nowrap;
 }
 
-.App-link {
-  color: #61dafb;
+.hamburger{
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width: 750px){
+  .hamburger{
+    display: flex;
+    margin-left: 10px;
+    z-index: 10;
   }
-  to {
-    transform: rotate(360deg);
+  .each-ham{
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+    background-color: white;
+  }
+  .items{
+    display: none;    
+  }
+  .active .items { 
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    background-color: white ;
+    border: 1px solid blue;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin-top: 50px;
+  }
+  .active .items li{
+    margin-top: 15px;
+    color: blue;
+  }
+  .active .items li:hover{
+    background-color: rgb(54, 54, 228, 0.75);
+    color: white;
+    cursor: pointer;
   }
 }
+
+
+
+
+
+
+
