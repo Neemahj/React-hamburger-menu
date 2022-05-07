@@ -19,16 +19,16 @@ function App() {
       </div>
 
       <div className="hamburger" onClick={handleShowMenu}>
-        <div className="each-ham"></div>
-        <div className="each-ham"></div>
-        <div className="each-ham"></div>
+        <div className="each-ham ham1"></div>
+        <div className="each-ham ham2"></div>
+        <div className="each-ham ham3"></div>
       </div>
       
       <ul className="items" >
-        <li>Home</li>
-        <li>Contact Us</li>
-        <li>Services</li>
-        <li>About Us</li>
+        <li><a href='#home'>Home</a></li>
+        <li><a href='#contact'>Contact Us</a></li>
+        <li><a href='#services'>Services</a></li>
+        <li><a href='#about'>About Us</a></li>
       </ul>
     </div>
   );
